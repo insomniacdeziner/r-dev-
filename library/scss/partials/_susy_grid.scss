@@ -1,0 +1,80 @@
+/* Changing Susy default global settings */
+$susy: (
+  container: 1200px,
+  gutters: .25,
+  columns: 12,
+  gutter-position: outside,
+  debug: (image: show)
+ );
+
+/* Makes border-box properties */
+@include border-box-sizing;
+
+.wrapper {
+  @include container;
+  padding: 0 10px;
+  margin: 0 auto;
+
+}
+.helper-class{
+	background-color:red;
+	margin-bottom:2px;
+	height:40px;
+	float:left;
+	clear:both;
+}
+.col-1{
+	@include span(1 of 12);
+	@extend .helper-class;
+}
+
+.col-2{
+	@include span(2 of 12);
+		@extend .helper-class;
+}
+.col-3{
+	@include span(3 of 12);
+		@extend .helper-class;
+}
+.col-4{
+	@include span(4 of 12);
+		@extend .helper-class;
+}
+.col-5{
+	@include span(5 of 12);
+		@extend .helper-class;
+}
+.col-6{
+	@include span(6 of 12);
+		@extend .helper-class;
+}
+.col-7{
+	@include span(7 of 12);
+		@extend .helper-class;
+}
+
+.col-8{
+	@include span(8 of 12);
+		@extend .helper-class;
+}
+
+
+.col-9{
+	@include span(9 of 12);
+		@extend .helper-class;
+}
+
+.col-10{
+	@include span(10 of 12);
+		@extend .helper-class;
+}
+
+.col-11{
+	@include span(11 of 12);
+		@extend .helper-class;
+}
+
+.col-12{
+	@include span(12 of 12);
+		@extend .helper-class;
+}

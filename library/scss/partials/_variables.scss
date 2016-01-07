@@ -1,0 +1,78 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Variables
+
+Here is where we declare all our variables like colors, fonts,
+base values, and defaults. We want to make sure this file ONLY
+contains variables that way our files don't get all messy.
+No one likes a mess.
+
+******************************************************************/
+
+/*********************
+COLORS
+Need help w/ choosing your colors? Try this site out:
+http://0to255.com/
+*********************/
+
+$gray-base:              #000;
+$gray-darker:            lighten($gray-base, 13.5%); // #222
+$gray-dark:              lighten($gray-base, 20%);   // #333
+$gray:                   lighten($gray-base, 33.5%); // #555
+$gray-light:             lighten($gray-base, 46.7%); // #777
+$gray-lighter:           lighten($gray-base, 93.5%); // #eee
+
+
+// Brand Colours
+
+$jacarta:				#462C6B;
+$deepsapphire:			#052460;
+$bahamablue:			#00628F;
+$cerulean: 				#00B0DF;
+$supernova:				#FFCF01;
+$saltpan:				#F1F7F4;
+$persianred:			#D12A2F;
+$hibiscus:				#CE3262;
+$smaltblue:				#50748A;
+$sirocco:				#707C7C;
+$downy:					#65CBC9;
+$deyork:				#6ECB98;
+$sunglow:				#FFBF3B;
+$regentstblue: 			#A4DAE7;
+
+$white:          		#fff;
+$black:          		#000;
+
+$brand-primary:         $downy;
+$brand-success:         $deyork;
+$brand-info:            $cerulean;
+$brand-warning:         $sunglow;
+$brand-danger:          $persianred;
+
+
+
+$alert-yellow:      #ebe16f;
+$alert-red:         #fbe3e4;
+$alert-green:       #e6efc2;
+$alert-blue:        #d5edf8;
+
+$black:             #000;
+$white:             #fff;
+
+
+$blue:              #2980b9;
+
+$link-color:        $jacarta;
+$link-hover:        darken($link-color, 9%);
+
+$border-color:      #ccc;
+$disabled-gray:     #cfcfcf;
+
+$text-color:        darken($smaltblue, 9%);
+/*
+Here's a great tutorial on how to
+use color variables properly:
+http://sachagreif.com/sass-color-variables/
+*/
