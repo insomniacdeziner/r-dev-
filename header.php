@@ -49,21 +49,23 @@
 				<div class="wrapper">
 
 					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow">
+					
+					<a class="logo" href="<?php echo home_url(); ?>">
                     
-                    <picture>
-                    <source type="image/svg+xml" srcset="<?php echo get_stylesheet_directory_uri(); ?>/library/images/rethink-solutions-logo.svg">
-                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/rethink-solutions-logo.png" width="175" height="48" alt="Rethink Solutions Inc. Logo">
-                </picture>
+	                    <picture>
+	                    <source type="image/svg+xml" srcset="<?php echo get_stylesheet_directory_uri(); ?>/library/images/rethink-solutions-logo.svg">
+	                    <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/rethink-solutions-logo.png" width="175" height="48" alt="Rethink Solutions Inc. Logo">
+						</picture>
                     
-                    
+                    </a>
                    <!-- <img src="<?php echo get_stylesheet_directory_uri(); ?>/library/images/rethink-solutions-logo.png" width="178" height="60" alt=""/></a></p> -->
 
 					<?php // if you'd like to use the site description you can un-comment it below ?>
 					<?php // bloginfo('description'); ?>
 
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php ubermenu( 'main' , array( 'menu' => 2 ) ); ?>
+					<!-- <nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 						<?php wp_nav_menu(array(
     					         'container' => false,                           // remove nav container
     					         'container_class' => 'menu cf',                 // class of container (should you choose to use it)
@@ -78,7 +80,7 @@
     					         'fallback_cb' => ''                             // fallback function (if there is one)
 						)); ?>
 
-					</nav>
+					</nav> -->
 
 				</div>
 

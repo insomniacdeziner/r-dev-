@@ -8,16 +8,27 @@ Stylesheet: Meteor Slides
 	height:auto;
 }
 .meteor-slide-heading{
+	@include span(12);
 	position: relative;
 	z-index:99;	
 	width:100%;
     padding: 1px 30px;
 	text-align:center;
 	bottom: 170px;
+	color: $white;
 }
 
+
 .heading-large{
-	font-size: 32px;
+	@include font-size(32px);
 	font-weight: 600;
 	line-height:1;
+	margin-bottom:20px;
+	padding: 0 10px;
+}
+
+.heading-medium{
+	@include font-size(18px);
+	margin-bottom:20px;
+	padding: 0 10px;
 }

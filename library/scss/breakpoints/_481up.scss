@@ -26,8 +26,17 @@ them in here, they won't work.
 /*********************
 NAVIGATION STYLES
 *********************/
+.logo{
+	@include span(3 of 12);
+	float: left;
+	padding: 10px;
+}
 
-.nav {}
+.nav {
+	@include span(9 of 12);
+	float: left;
+	padding-top: 14px;
+}
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {
@@ -35,9 +44,9 @@ NAVIGATION STYLES
 			li {
 		
 				a {
-						display: block;
-						float: left;
-									/*
+					display: inline-block;
+					
+					/*
 					you can use hover styles here even though this size
 					has the possibility of being a mobile device.
 					*/

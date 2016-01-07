@@ -350,6 +350,35 @@ body#tinymce.wp-editor {
   /*********************
   TYPOGRAPHY
   *********************/
+  /******************************************************************
+  Site Name:
+  Author:
+  
+  Stylesheet: Button Styles
+  
+  Buttons are a pretty important part of your site's style, so it's
+  important to have a consistent baseline for them. Use this stylesheet
+  to create all kinds of buttons.
+  
+  Helpful Links:
+  http://galp.in/blog/2011/08/02/the-ui-guide-part-1-buttons/
+  
+  ******************************************************************/
+  /*********************
+  BUTTON DEFAULTS
+  We're gonna use a placeholder selector here
+  so we can use common styles. We then use this
+  to load up the defaults in all our buttons.
+  
+  Here's a quick video to show how it works:
+  http://www.youtube.com/watch?v=hwdVpKiJzac
+  
+  *********************/
+  /*
+  An example button.
+  You can use this example if you want. Just replace all the variables
+  and it will create a button dependant on those variables.
+  */
   width: 731px;
   font-family: 'Open Sans', sans-serif;
   font-size: 100%;
@@ -581,6 +610,54 @@ body#tinymce.wp-editor {
     font-feature-settings: "liga", "dlig"; }
   body#tinymce.wp-editor .large-heading {
     font-size: 30px; }
+  body#tinymce.wp-editor .blue-btn, body#tinymce.wp-editor .green-btn, body#tinymce.wp-editor .green-border-btn, body#tinymce.wp-editor .btn-large {
+    display: inline-block;
+    position: relative;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 34px;
+    font-weight: normal;
+    padding: 5px 24px;
+    border-radius: 4px;
+    border: 0;
+    cursor: pointer;
+    -webkit-transition: background-color 0.14s ease-in-out;
+    transition: background-color 0.14s ease-in-out; }
+    body#tinymce.wp-editor .blue-btn:hover, body#tinymce.wp-editor .green-btn:hover, body#tinymce.wp-editor .green-border-btn:hover, body#tinymce.wp-editor .btn-large:hover, body#tinymce.wp-editor .blue-btn:focus, body#tinymce.wp-editor .green-btn:focus, body#tinymce.wp-editor .green-border-btn:focus, body#tinymce.wp-editor .btn-large:focus {
+      color: #fff;
+      text-decoration: none;
+      outline: none;
+      background-color: #40bdbb; }
+    body#tinymce.wp-editor .blue-btn:active, body#tinymce.wp-editor .green-btn:active, body#tinymce.wp-editor .green-border-btn:active, body#tinymce.wp-editor .btn-large:active {
+      top: 1px; }
+  body#tinymce.wp-editor .blue-btn {
+    background-color: #462C6B; }
+    body#tinymce.wp-editor .blue-btn:hover, body#tinymce.wp-editor .blue-btn:focus {
+      background-color: #3d265d; }
+    body#tinymce.wp-editor .blue-btn:active {
+      background-color: #3a2559; }
+  body#tinymce.wp-editor .green-btn {
+    background-color: #65CBC9; }
+    body#tinymce.wp-editor .green-btn:hover, body#tinymce.wp-editor .green-btn:focus {
+      background-color: #56c6c4; }
+    body#tinymce.wp-editor .green-btn:active {
+      background-color: #52c5c2; }
+  body#tinymce.wp-editor .green-border-btn {
+    color: #65CBC9;
+    border: 2px solid #65CBC9; }
+    body#tinymce.wp-editor .green-border-btn:hover, body#tinymce.wp-editor .green-border-btn:focus {
+      background-color: #56c6c4; }
+    body#tinymce.wp-editor .green-border-btn:active {
+      background-color: #52c5c2; }
+  body#tinymce.wp-editor .btn-large {
+    padding: 10px 30px;
+    font-size: 32px;
+    font-size: 2rem;
+    background-color: #462C6B;
+    color: #fff; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
     color: #462C6B;
     /* on hover */

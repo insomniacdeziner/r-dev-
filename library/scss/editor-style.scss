@@ -24,12 +24,12 @@ body#tinymce.wp-editor {
 
 	// typography
 	@import "partials/typography";
-
 	// Sass functions
 	@import "partials/functions";
 
 	// import mixins
 	@import "partials/mixins";
+	@import "modules/buttons";
 
 	width: 731px;
 	font-family: 'Open Sans', sans-serif;

@@ -90,9 +90,10 @@ and it will create a button dependant on those variables.
 
 } 
 
-.w{
+.green-border-btn{
   @extend %btn; 
-  border-color: 2px solid $downy;
+  color: $downy;
+  border: 2px solid $downy;
 
   &:hover,
   &:focus {
