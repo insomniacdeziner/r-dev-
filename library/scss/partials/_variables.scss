@@ -71,8 +71,8 @@ $border-color:      #ccc;
 $disabled-gray:     #cfcfcf;
 
 $text-color:        darken($smaltblue, 9%);
-/*
-Here's a great tutorial on how to
-use color variables properly:
-http://sachagreif.com/sass-color-variables/
-*/
+
+$light: 			300;
+$normal:			400;
+$semi-bold:			600;
+$bold:				700;

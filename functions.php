@@ -301,11 +301,4 @@ add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' );
 
 
 
-
-
-
-
-
-
-
 /* DON'T DELETE THIS CLOSING TAG */ ?>

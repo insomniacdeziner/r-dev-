@@ -5,47 +5,82 @@
 ?>
 <?php get_header(); ?>
 
-<div class="wrapper">
 
   <main id="main" class="content" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
-    
-	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow(); } ?>
+   
+
+		
+	<?php if( have_rows('home_carousel_image_boxes_wrap') ): ?>
+
+
+	<?php while( have_rows('home_carousel_image_boxes_wrap') ): the_row(); ?>
+
+			<?php if( get_row_layout() == 'home_inner' ): 
+
+					$banner_image = get_sub_field('banner_background_image');
+				  	$image_01 = get_sub_field('banner_box_one_image');
+				  	$image_02 = get_sub_field('banner_box_two_image');
+				  	$image_03 = get_sub_field('banner_box_three_image'); 
+
+				?>
+		   <section class="home-banner">		
+				<h1><?php the_sub_field('banner_title'); ?></h1>
+				<h2><?php the_sub_field('banner_sub_title'); ?></h2>
+				
+				<img class="background-image" src="<?php echo $banner_image['url']; ?>" alt="<?php echo $banner_image['alt'] ?>" />
+				<figure>
+					<img src="<?php echo $image_01['url']; ?>" alt="<?php echo $image_01['alt'] ?>" />
+					<figcaption>
+						<?php the_sub_field('banner_title'); ?>
+						<a href="<?php the_sub_field('banner_box_one_text'); ?>">Learn More</a>
+					</figcaption>
+				</figure>
+				
+				<figure>
+					<img src="<?php echo $image_02['url']; ?>" alt="<?php echo $image_02['alt'] ?>" />
+					<figcaption>
+						<?php the_sub_field('banner_title'); ?>
+						<a href="<?php the_sub_field('banner_box_two_text'); ?>">Learn More</a>
+					</figcaption>
+				</figure>
+				
+				<figure>
+					<img src="<?php echo $image_03['url']; ?>" alt="<?php echo $image_03['alt'] ?>" />
+					<figcaption>
+						<?php the_sub_field('banner_title'); ?>
+						<a href="<?php the_sub_field('bbanner_box_three_text'); ?>">Learn More</a>
+					</figcaption>
+				</figure>
+			</section>				
+			<?php elseif(get_row_layout() == 'product_block' ): 
+				
+				$product_image = get_sub_field('product_image');
+				$product_bg = get_sub_field('product_background_image');
+				
+			?>
+			<section class="home-product">
+				<?php the_sub_field('product_title'); ?>
+				<?php the_sub_field('product_sub_title'); ?>
+				<img src="<?php echo $product_image['url']; ?>" alt="<?php echo $product_image['alt'] ?>" />
+				<img src="<?php echo $product_bg['url']; ?>" alt="<?php echo $product_bg['alt'] ?>" />
+			</section>
+
+			<?php endif; ?>
+
+	<?php endwhile; ?>
+
+
+<?php endif; ?>	
 	
 
 	
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
     <article id="post-<?php the_ID(); ?>" <?php post_class( 'cf' ); ?> role="article" itemscope itemtype="http://schema.org/BlogPosting">
-      <header class="article-header">
-        <h1 class="page-title">
-          <?php the_title(); ?>
-        </h1>
-        <p class="byline vcard"> <?php printf( __( 'Posted <time class="updated" datetime="%1$s" itemprop="datePublished">%2$s</time> by <span class="author">%3$s</span>', 'bonestheme' ), get_the_time('Y-m-j'), get_the_time(get_option('date_format')), get_the_author_link( get_the_author_meta( 'ID' ) )); ?> </p>
-      </header>
-      <section class="entry-content" itemprop="articleBody">
-        <?php
-										// the content (pretty self explanatory huh)
-										the_content();
 
-										/*
-										 * Link Pages is used in case you have posts that are set to break into
-										 * multiple pages. You can remove this if you don't plan on doing that.
-										 *
-										 * Also, breaking content up into multiple pages is a horrible experience,
-										 * so don't do it. While there are SOME edge cases where this is useful, it's
-										 * mostly used for people to get more ad views. It's up to you but if you want
-										 * to do it, you're wrong and I hate you. (Ok, I still love you but just not as much)
-										 *
-										 * http://gizmodo.com/5841121/google-wants-to-help-you-avoid-stupid-annoying-multiple-page-articles
-										 *
-										*/
-										wp_link_pages( array(
-											'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'bonestheme' ) . '</span>',
-											'after'       => '</div>',
-											'link_before' => '<span>',
-											'link_after'  => '</span>',
-										) );
-									?>
-      </section>
+     
+      
+ 
+      
       <footer class="article-footer">
         <?php the_tags( '<p class="tags"><span class="tags-title">' . __( 'Tags:', 'bonestheme' ) . '</span> ', ', ', '</p>' ); ?>
       </footer>

@@ -177,12 +177,32 @@ and more scalable.
 .nav {
 	border-bottom: 0;
 	margin: 0;
+	font-weight: $semi-bold;
+	@include font-size(12px);
+	
+	.request-demo-btn {
+		background-color: $downy;
+		text-transform: uppercase;
+		@include font-size(14px);
+		padding: 0 5px;
+		
+		a{
+			color: $white;
+		}
+		
+		&:hover, &:focus {
+		    color: $white;
+		    text-decoration: none;
+		    outline: none;
+			background-color: darken($downy, 10%);
+		  } 
+	}
 
 	li {
 
 		a {
 			display: block;
-			color: $white;
+			color: $jacarta;
 			text-decoration: none;
 			padding: 0.75em;
 
@@ -244,6 +264,9 @@ and more scalable.
 
 } /* end .nav */
 
+.ubermenu-responsive-default.ubermenu{
+	border-top: 1px dotted $gray-lighter;
+}
 
 /*********************
 POSTS & CONTENT STYLES

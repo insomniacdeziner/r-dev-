@@ -4,13 +4,18 @@ $susy: (
   gutters: .25,
   columns: 12,
   gutter-position: outside,
-  debug: (image: show)
+  debug: (
+	  	image: hide,
+	    color: rgba(#66f, .25),
+	    output: background,
+	    toggle: top left,
+  	)
  );
 
 /* Makes border-box properties */
 @include border-box-sizing;
 
-.wrapper {
+.wrap {
   @include container;
   padding: 0 10px;
   margin: 0 auto;

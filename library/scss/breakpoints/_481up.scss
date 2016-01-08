@@ -27,24 +27,40 @@ them in here, they won't work.
 NAVIGATION STYLES
 *********************/
 .logo{
-	@include span(3 of 12);
+	@include span(4 of 12);
 	float: left;
 	padding: 10px;
 }
 
 .nav {
-	@include span(9 of 12);
-	float: left;
+	@include span(6 of 12 last);
+	float: right;
 	padding-top: 14px;
+	margin-top: 10px;
+	.request-demo-btn {
+		@include font-size(12px);
+	}
+	.signin-btn{
+		position: relative;
+		top: 12px;
+		margin-right: 10px;
+	}
+	
+	li a {
+		padding: 0;
+	}
 }
 
 	/* .menu is clearfixed inside mixins.scss */
 	.menu {
+	
 		ul {
+
 			li {
-		
+
 				a {
 					display: inline-block;
+				
 					
 					/*
 					you can use hover styles here even though this size
@@ -53,6 +69,7 @@ NAVIGATION STYLES
 					&:hover, &:focus {
 
 					}
+					
 				}
 
 				&:first-child {}

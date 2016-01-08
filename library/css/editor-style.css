@@ -204,11 +204,6 @@ body#tinymce.wp-editor {
   Need help w/ choosing your colors? Try this site out:
   http://0to255.com/
   *********************/
-  /*
-  Here's a great tutorial on how to
-  use color variables properly:
-  http://sachagreif.com/sass-color-variables/
-  */
   /******************************************************************
   Site Name:
   Author:
@@ -610,7 +605,7 @@ body#tinymce.wp-editor {
     font-feature-settings: "liga", "dlig"; }
   body#tinymce.wp-editor .large-heading {
     font-size: 30px; }
-  body#tinymce.wp-editor .blue-btn, body#tinymce.wp-editor .green-btn, body#tinymce.wp-editor .green-border-btn, body#tinymce.wp-editor .btn-large {
+  body#tinymce.wp-editor .blue-btn, body#tinymce.wp-editor .green-btn, body#tinymce.wp-editor .green-border-btn, body#tinymce.wp-editor .btn-large, body#tinymce.wp-editor .request-demo-btn {
     display: inline-block;
     position: relative;
     font-family: "Open Sans", sans-serif;
@@ -619,19 +614,19 @@ body#tinymce.wp-editor {
     font-size: 18px;
     font-size: 1.125rem;
     line-height: 34px;
-    font-weight: normal;
+    font-weight: 600;
     padding: 5px 24px;
     border-radius: 4px;
     border: 0;
     cursor: pointer;
     -webkit-transition: background-color 0.14s ease-in-out;
     transition: background-color 0.14s ease-in-out; }
-    body#tinymce.wp-editor .blue-btn:hover, body#tinymce.wp-editor .green-btn:hover, body#tinymce.wp-editor .green-border-btn:hover, body#tinymce.wp-editor .btn-large:hover, body#tinymce.wp-editor .blue-btn:focus, body#tinymce.wp-editor .green-btn:focus, body#tinymce.wp-editor .green-border-btn:focus, body#tinymce.wp-editor .btn-large:focus {
+    body#tinymce.wp-editor .blue-btn:hover, body#tinymce.wp-editor .green-btn:hover, body#tinymce.wp-editor .green-border-btn:hover, body#tinymce.wp-editor .btn-large:hover, body#tinymce.wp-editor .request-demo-btn:hover, body#tinymce.wp-editor .blue-btn:focus, body#tinymce.wp-editor .green-btn:focus, body#tinymce.wp-editor .green-border-btn:focus, body#tinymce.wp-editor .btn-large:focus, body#tinymce.wp-editor .request-demo-btn:focus {
       color: #fff;
       text-decoration: none;
       outline: none;
       background-color: #40bdbb; }
-    body#tinymce.wp-editor .blue-btn:active, body#tinymce.wp-editor .green-btn:active, body#tinymce.wp-editor .green-border-btn:active, body#tinymce.wp-editor .btn-large:active {
+    body#tinymce.wp-editor .blue-btn:active, body#tinymce.wp-editor .green-btn:active, body#tinymce.wp-editor .green-border-btn:active, body#tinymce.wp-editor .btn-large:active, body#tinymce.wp-editor .request-demo-btn:active {
       top: 1px; }
   body#tinymce.wp-editor .blue-btn {
     background-color: #462C6B; }
@@ -658,6 +653,14 @@ body#tinymce.wp-editor {
     font-size: 2rem;
     background-color: #462C6B;
     color: #fff; }
+  body#tinymce.wp-editor .request-demo-btn {
+    border: 2px solid #65CBC9;
+    color: #65CBC9;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 34px;
+    padding: 0;
+    text-align: center; }
   body#tinymce.wp-editor a, body#tinymce.wp-editor a:visited {
     color: #462C6B;
     /* on hover */
